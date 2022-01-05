@@ -1,0 +1,23 @@
+eureka:
+  instance:
+    hostname: ms-eureka-server
+    prefer-ip-address: 'true'
+    lease-renewal-interval-in-seconds: '10'
+    lease-expiration-duration-in-seconds: '20'
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  config:
+    import: 'optional:configserver:'
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+  application:
+    name: ms-solicitudes
+  datasource:
+    password: '12345'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3300/financiera?

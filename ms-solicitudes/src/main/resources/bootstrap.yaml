@@ -1,0 +1,5 @@
+spring: 
+  application:
+    name: ms-solicitudes
+  cloud:    config:      enabled: true
+      uri: http://localhost:8080

@@ -1,0 +1,5 @@
+spring:
+  cloud:    config:      server:        git:          default-label: ms-config-server
+          uri: https://github.com/alechuertasfranco/ms-financiera
+          search-paths: cofig-data
+  application:    name: ms-config-server
