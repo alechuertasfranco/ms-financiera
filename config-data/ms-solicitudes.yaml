@@ -16,7 +16,7 @@ spring:
   application:
     name: ms-solicitudes
   datasource:
-    password: '1234'
+    password: '12345'
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     url: jdbc:mysql://4.tcp.ngrok.io:10524/financiera?

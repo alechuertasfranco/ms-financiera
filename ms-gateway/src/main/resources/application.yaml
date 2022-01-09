@@ -1,8 +1,35 @@
-spring: 
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: ms-solicitudes
+          uri: lb://ms-solicitudes
+          predicates:
+          - Path=/api/solicitudes/**
+          filters: StripPrefix=2
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: '*'
+            allowedHeaders:
+            - X-API-KEY
+            - Origin
+            - X-Requested-With
+            - Content-Type
+            - Accept
+            - Access-Control-Request-Method
+            allowedMethods:
+            - GET
+            - POST
+            - OPTIONS
+            - PUT
+            - DELETE
   application:
     name: ms-gateway
-  cloud:
-    config:
-      enabled: true
-      #uri: http://localhost:8081
-      uri: http://4c08-2800-200-f018-81d3-4187-665b-4f3e-8831.ngrok.io
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://localhost:8761/eureka
+      defaultZone: http://5f16-2800-200-f018-81d3-4187-665b-4f3e-8831.ngrok.io/eureka
+server:
+  port: '8090'
