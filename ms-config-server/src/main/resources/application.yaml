@@ -1,1 +1,8 @@
-spring:   application:    name: ms-gateway  cloud:    config:      enabled: true      #uri: http://localhost:8081      uri: http://4c08-2800-200-f018-81d3-4187-665b-4f3e-8831.ngrok.io
+server:  port: 8081
+spring:
+  cloud:    config:      server:        git:          default-label: main
+          uri: https://github.com/alechuertasfranco/ms-financiera
+          search-paths: config-data
+          username: alechuertasfranco
+          password: wr6PtC7GrMbyXYA
+  application:    name: ms-config-server
