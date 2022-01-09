@@ -18,5 +18,5 @@ spring:
   datasource:
     password: '12345'
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root2
-    url: jdbc:mysql://localhost:3307/financiera?
+    username: root
+    url: jdbc:mysql://4.tcp.ngrok.io:10524/financiera?
