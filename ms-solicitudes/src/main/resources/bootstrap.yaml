@@ -1,3 +1,6 @@
+eureka:
+  instance:
+    instance-id: ClienteFinancieraSantaMaria
 spring: 
   application:
     name: ms-solicitudes

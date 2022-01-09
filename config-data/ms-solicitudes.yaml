@@ -19,4 +19,4 @@ spring:
     password: 'password'
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    url: jdbc:mysql://4.tcp.ngrok.io:10524/financiera?
+    url: jdbc:mysql://4.tcp.ngrok.io:12228/financiera?
