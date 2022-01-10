@@ -6,8 +6,8 @@ eureka:
     lease-expiration-duration-in-seconds: '20'
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-      #defaultZone: http://5f16-2800-200-f018-81d3-4187-665b-4f3e-8831.ngrok.io/eureka
+      #defaultZone: http://localhost:8761/eureka
+      defaultZone: http://9ed5-2800-200-f018-81d3-4187-665b-4f3e-8831.ngrok.io/eureka
 spring:
   jpa:
     database: MYSQL
