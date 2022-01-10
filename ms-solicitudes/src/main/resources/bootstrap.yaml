@@ -5,5 +5,5 @@ spring:
   application:
     name: ms-solicitudes
   cloud:    config:      enabled: true
-      uri: http://localhost:8081
+      uri: http://102a-181-64-105-89.ngrok.io
       #uri: http://4c08-2800-200-f018-81d3-4187-665b-4f3e-8831.ngrok.io
