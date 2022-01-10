@@ -6,8 +6,8 @@ eureka:
     lease-expiration-duration-in-seconds: '20'
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-      #defaultZone: http://5763-2800-200-f018-81d3-8136-682b-50d3-394b.ngrok.io/eureka
+      #defaultZone: http://localhost:8761/eureka
+      defaultZone: http://5763-2800-200-f018-81d3-8136-682b-50d3-394b.ngrok.io/eureka
 spring:
   jpa:
     database: MYSQL
@@ -19,5 +19,5 @@ spring:
     password: '12345'
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    url: jdbc:mysql://localhost:3300/financiera?
-    #url: jdbc:mysql://8.tcp.ngrok.io:13515/financiera?
+    #url: jdbc:mysql://localhost:3300/financiera?
+    url: jdbc:mysql://8.tcp.ngrok.io:13515/financiera?
