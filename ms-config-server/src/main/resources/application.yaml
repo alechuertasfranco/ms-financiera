@@ -5,4 +5,4 @@ spring:
           search-paths: config-data
           username: alechuertasfranco
           password: wr6PtC7GrMbyXYA
-  application:    name: ms-config-server
+  application:    name: ms-config-server
