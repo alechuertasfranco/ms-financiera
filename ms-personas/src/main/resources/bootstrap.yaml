@@ -1,9 +1,9 @@
 eureka:
   instance:
-    instance-id: ClienteSolicitudesSantaMaria
+    instance-id: ClientePersonasSantaMaria
 spring: 
   application:
-    name: ms-solicitudes
+    name: ms-personas
   cloud:    config:      enabled: true
       uri: http://localhost:8081
       #uri: http://20fa-179-6-85-92.ngrok.io
