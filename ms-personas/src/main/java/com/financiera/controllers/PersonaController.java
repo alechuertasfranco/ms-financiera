@@ -14,7 +14,7 @@ import com.financiera.interfaces.PersonaInterface;
 import com.financiera.modelos.Persona;
 
 @CrossOrigin
-@RestController("solicitudes")
+@RestController("personas")
 public class PersonaController {
 	
 	@Autowired

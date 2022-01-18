@@ -14,7 +14,6 @@ public class Persona {
 	@Column private String correo;
 	@Column private String telefono;
 
-
 	public Persona() { }
 
 	public String getDni() {
