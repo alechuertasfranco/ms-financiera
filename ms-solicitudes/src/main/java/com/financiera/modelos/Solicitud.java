@@ -21,7 +21,7 @@ public class Solicitud {
 	@Column	private String estado;
 	@ManyToOne
     @JoinColumn(name="id_persona", nullable=false)
-    String id_persona;
+    Persona persona;
 	
 	public Solicitud() { }
 	
@@ -56,13 +56,12 @@ public class Solicitud {
 		this.estado = estado;
 	}
 
-	public String getId_persona() {
-		return id_persona;
+	public Persona getPersona() {
+		return persona;
 	}
 
-	public void setId_persona(String id_persona) {
-		this.id_persona = id_persona;
+	public void setPersona(Persona persona) {
+		this.persona = persona;
 	}
 
-	
 }
