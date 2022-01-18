@@ -7,8 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-// import javax.persistence.JoinColumn;
-// import javax.persistence.ManyToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,9 +19,9 @@ public class Solicitud {
 	@Column private Float monto;
 	@Column private Integer cuotas;
 	@Column	private String estado;
-	// @ManyToOne
-    // @JoinColumn(name="id_persona", nullable=false)
-    // Persona persona;
+	@ManyToOne
+    @JoinColumn(name="id_persona", nullable=false)
+    Persona persona;
 	
 	public Solicitud() { }
 	
@@ -55,11 +55,11 @@ public class Solicitud {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	// public Persona getPersona() {
-	// 	return persona;
-	// }
-	// public void setPersona(Persona persona) {
-	// 	this.persona = persona;
-	// }
+	public Persona getPersona() {
+		return persona;
+	}
+	public void setPersona(Persona persona) {
+		this.persona = persona;
+	}
 
 }
