@@ -19,7 +19,7 @@ import com.financiera.services.PersonaService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/personas")
+@RequestMapping("/api/personas")
 public class PersonaController {
 	
 	@Autowired

@@ -18,7 +18,7 @@ import com.financiera.services.SolicitudService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/solicitudes")
+@RequestMapping("/api/solicitudes")
 public class SolicitudController {
 	
 	@Autowired

@@ -1,11 +1,19 @@
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: ms-solicitudes
           uri: lb://ms-solicitudes
           predicates:
           - Path=/api/solicitudes/**
+          filters: StripPrefix=2
+        - id: ms-personas
+          uri: lb://ms-personas
+          predicates:
+          - Path=/api/personas/**
           filters: StripPrefix=2
       globalcors:
         cors-configurations:
@@ -29,7 +37,8 @@ spring:
 eureka:
   client:
     service-url:
-      #defaultZone: http://localhost:8761/eureka
-      defaultZone: http://5f16-2800-200-f018-81d3-4187-665b-4f3e-8831.ngrok.io/eureka
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: ms-gateway
 server:
   port: '8090'
