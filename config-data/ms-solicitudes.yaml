@@ -1,8 +1,8 @@
 server:
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8002
 eureka:
   instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instance-id: ${spring.application.name}:${spring.application.instance_id}
     prefer-ip-address: 'true'
     lease-renewal-interval-in-seconds: '10'
     lease-expiration-duration-in-seconds: '20'
