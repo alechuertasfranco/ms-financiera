@@ -12,12 +12,10 @@ spring:
           uri: lb://ms-solicitudes
           predicates:
           - Path=/api/solicitudes/**
-          filters: StripPrefix=2
         - id: ms-personas
           uri: lb://ms-personas
           predicates:
           - Path=/api/personas/**
-          filters: StripPrefix=2
       globalcors:
         cors-configurations:
           '[/**]':
