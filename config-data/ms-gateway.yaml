@@ -1,3 +1,6 @@
+
+server:
+  port: 8090
 spring:
   cloud:
     gateway:
@@ -40,5 +43,3 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     hostname: ms-gateway
-server:
-  port: '8090'
