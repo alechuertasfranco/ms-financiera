@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.financiera.modelos.Solicitud;
 
-@FeignClient(name="ms-solicitudes", url="http://localhost:8002/solicitudes")
+@FeignClient(name="ms-solicitudes", path = "/api/solicitudes")
 public interface SolicitudFeignClient {
 	
 	@PostMapping()

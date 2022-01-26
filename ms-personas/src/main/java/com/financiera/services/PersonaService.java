@@ -39,7 +39,7 @@ public class PersonaService {
 	}
 	
 	public List<Solicitud> getSolicitudes(String personaDni) {
-		List<Solicitud> solicitudes = restTemplate.getForObject("http://ms-solicitudes/solicitudes/persona/"+ personaDni, List.class);
+		List<Solicitud> solicitudes = restTemplate.getForObject("http://ms-solicitudes/api/solicitudes/persona/"+ personaDni, List.class);
 		return solicitudes;
 	}
 	
