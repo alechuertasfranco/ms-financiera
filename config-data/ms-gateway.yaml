@@ -11,11 +11,11 @@ spring:
         - id: ms-solicitudes
           uri: lb://ms-solicitudes
           predicates:
-          - Path=/api/solicitudes/**
+            - Path=/api/solicitudes/**
         - id: ms-personas
           uri: lb://ms-personas
           predicates:
-          - Path=/api/personas/**
+            - Path=/api/personas/**
       globalcors:
         cors-configurations:
           '[/**]':
