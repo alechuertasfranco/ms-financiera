@@ -1,6 +1,3 @@
-eureka:
-  instance:
-    instance-id: EurekaServer
 spring: 
   application:
     name: ms-eureka-server
