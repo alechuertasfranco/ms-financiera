@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  database:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'financiera'   
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: '12345'      
+      MYSQL_ROOT_PASSWORD: '12345'
+    ports:
+      - '3300:3300'
+    expose:
+      - '3300'
+    volumes:
+      - './.mysql-data/db:/var/lib/mysql'
