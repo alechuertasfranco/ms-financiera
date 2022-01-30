@@ -19,3 +19,12 @@ services:
       - './ms-config-server/src/main/resources/application.yaml:/config/application.yaml'
     ports:
       - '8080:8888'
+
+        
+  ms-eureka-server:
+    image: alechuertasf/ms-eureka-server
+    container_name: ms-eureka-server
+    depends_on:
+      - ms-config-server
+    ports:
+      - '8761:8761'
