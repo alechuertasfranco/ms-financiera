@@ -1,17 +1,21 @@
 version: '3.3'
 services:
+
   database:
     image: mysql:5.7
     container_name: mysql
-    restart: always
     environment:
-      MYSQL_DATABASE: 'financiera'   
-      MYSQL_USER: 'root'
-      MYSQL_PASSWORD: '12345'      
+      MYSQL_DATABASE: 'financiera'      
       MYSQL_ROOT_PASSWORD: '12345'
-    ports:
-      - '3300:3300'
-    expose:
-      - '3300'
     volumes:
-      - './.mysql-data/db:/var/lib/mysql'
+      - './.mysql-data/financiera:/var/lib/mysql'
+    ports:
+      - '3306:3300'
+      
+  ms-config-server:
+    image: hyness/spring-cloud-config-server
+    container_name: ms-config-server
+    volumes:
+      - './ms-config-server/src/main/resources/application.yaml:/config/application.yaml'
+    ports:
+      - '8080:8888'
