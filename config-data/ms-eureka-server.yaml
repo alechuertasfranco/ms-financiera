@@ -1,6 +1,6 @@
 server:
   ports: 
-    - "8761:8761"
+    - '8761:8761'
 spring:
   application:
     name: ms-solicitudes

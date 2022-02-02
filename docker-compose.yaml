@@ -11,10 +11,8 @@ services:
       - './.mysql-data/financiera:/var/lib/mysql'
       
   ms-config-server:
-    image: hyness/spring-cloud-config-server
+    image: alechuertasf/ms-config-server
     container_name: ms-config-server
-    volumes:
-      - './ms-config-server/src/main/resources/application.yaml:/config/application.yaml'
     ports:
       - '8888:8888'
 
