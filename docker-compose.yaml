@@ -9,7 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: '12345'
     volumes:
       - './.mysql-data/financiera:/var/lib/mysql'
-      
+
   ms-config-server:
     image: alechuertasf/ms-config-server
     container_name: ms-config-server
@@ -23,11 +23,21 @@ services:
       - ms-config-server
     ports:
       - '8761:8761'
-      
+
   ms-gateway:
     image: alechuertasf/ms-gateway
     container_name: ms-gateway
     depends_on:
       - ms-config-server
+      - ms-eureka-server
     ports:
       - '8090:8090'
+
+  ms-personas:
+    image: alechuertasf/ms-personas
+    container_name: ms-personas
+    depends_on:
+      - ms-config-server
+      - ms-eureka-server
+    ports:
+      - '8001:8001'
