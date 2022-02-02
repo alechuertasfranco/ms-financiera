@@ -16,7 +16,6 @@ services:
     ports:
       - '8888:8888'
 
-        
   ms-eureka-server:
     image: alechuertasf/ms-eureka-server
     container_name: ms-eureka-server
@@ -24,3 +23,11 @@ services:
       - ms-config-server
     ports:
       - '8761:8761'
+      
+  ms-gateway:
+    image: alechuertasf/ms-gateway
+    container_name: ms-gateway
+    depends_on:
+      - ms-config-server
+    ports:
+      - '8090:8090'
