@@ -9,8 +9,6 @@ services:
       MYSQL_ROOT_PASSWORD: '12345'
     volumes:
       - './.mysql-data/financiera:/var/lib/mysql'
-    ports:
-      - '3306:3300'
       
   ms-config-server:
     image: hyness/spring-cloud-config-server
@@ -18,7 +16,7 @@ services:
     volumes:
       - './ms-config-server/src/main/resources/application.yaml:/config/application.yaml'
     ports:
-      - '8080:8888'
+      - '8888:8888'
 
         
   ms-eureka-server:
