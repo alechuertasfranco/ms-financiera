@@ -9,6 +9,10 @@ services:
       MYSQL_ROOT_PASSWORD: '12345'
     volumes:
       - './.mysql-data/financiera:/var/lib/mysql'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
 
   ms-config-server:
     image: alechuertasf/ms-config-server
