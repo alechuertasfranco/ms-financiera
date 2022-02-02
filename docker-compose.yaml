@@ -3,9 +3,9 @@ services:
 
   database:
     image: mysql:5.7
-    container_name: mysql
+    container_name: database
     environment:
-      MYSQL_DATABASE: 'financiera'      
+      MYSQL_DATABASE: 'financiera'
       MYSQL_ROOT_PASSWORD: '12345'
     volumes:
       - './.mysql-data/financiera:/var/lib/mysql'
