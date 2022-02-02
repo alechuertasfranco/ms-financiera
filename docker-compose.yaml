@@ -50,7 +50,6 @@ services:
     image: alechuertasf/ms-solicitudes
     container_name: ms-solicitudes
     depends_on:
-      - ms-config-server
-      - ms-eureka-server
+      - ms-personas
     ports:
       - '8002:8002'
