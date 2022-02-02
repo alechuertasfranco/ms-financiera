@@ -46,11 +46,11 @@ services:
     ports:
       - '8001:8001'
       
-  # ms-solicitudes:
-  #   image: alechuertasf/ms-solicitudes
-  #   container_name: ms-solicitudes
-  #   depends_on:
-  #     - ms-config-server
-  #     - ms-eureka-server
-  #   ports:
-  #     - '8002:8002'
+  ms-solicitudes:
+    image: alechuertasf/ms-solicitudes
+    container_name: ms-solicitudes
+    depends_on:
+      - ms-config-server
+      - ms-eureka-server
+    ports:
+      - '8002:8002'
