@@ -4,5 +4,5 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8080
+      uri: http://localhost:8888
       #uri: http://20fa-179-6-85-92.ngrok.io

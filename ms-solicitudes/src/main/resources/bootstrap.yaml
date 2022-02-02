@@ -4,6 +4,8 @@ eureka:
 spring: 
   application:
     name: ms-solicitudes
-  cloud:    config:      enabled: true
-      uri: http://localhost:8080
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8888
       #uri: http://20fa-179-6-85-92.ngrok.io
