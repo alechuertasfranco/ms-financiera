@@ -6,7 +6,6 @@ spring:
     name: ms-personas
   cloud:
     config:
-      request-connect-timeout: 1000000
       enabled: true
-      uri: http://ms-config-server:8888
+      uri: http://localhost:8888
       #uri: http://20fa-179-6-85-92.ngrok.io
