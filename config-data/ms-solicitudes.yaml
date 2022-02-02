@@ -21,5 +21,5 @@ spring:
     username: root
     password: '12345'
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://database:3306/financiera?
+    url: jdbc:mysql://database:3306/financiera?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&
     #url: jdbc:mysql://0.tcp.ngrok.io:19069/financiera?
